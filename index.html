@@ -5,41 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psychologiemuseum</title>
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: 'Arial Black', Arial, sans-serif;
-            background: #000000;
-            color: #ffffff;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #0d3b66;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+        }
+        nav {
+            background-color: #0d3b66;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff6347;
+        }
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+        .intro {
+            background-color: #ffffff;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .intro h2 {
+            font-size: 2.5rem;
+            color: #0d3b66;
+        }
+        .intro p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .interactive {
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
+            gap: 2rem;
+            margin-top: 2rem;
         }
-        h1 {
-            font-size: 4rem;
-            text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+        .interactive div {
+            background-color: #0d3b66;
+            color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            flex: 1;
+            text-align: center;
+            transition: transform 0.3s;
         }
-        p {
-            font-size: 1.5rem;
-            margin-top: 20px;
-            color: #888888;
+        .interactive div:hover {
+            transform: scale(1.05);
         }
-        .line {
-            margin-top: 30px;
-            width: 80%;
-            height: 1px;
-            background: linear-gradient(to left, #ffffff, transparent),
-                        linear-gradient(to right, #ffffff, transparent);
+        footer {
+            background-color: #0d3b66;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
-    <h1>Das Psychologiemuseum</h1>
-    <div class="line"></div>
-    <p>Eröffnung 2030</p>
+    <!-- Header -->
+    <header>
+        <h1>Psychologiemuseum</h1>
+        <p>Entdecke die Welt des menschlichen Geistes</p>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <a href="#intro">Einführung</a>
+        <a href="#history">Geschichte</a>
+        <a href="#exhibits">Ausstellungen</a>
+        <a href="#research">Forschung</a>
+    </nav>
+
+    <!-- Section: Einführung -->
+    <section id="intro" class="intro">
+        <h2>Was ist Psychologie?</h2>
+        <p>Psychologie ist die Wissenschaft vom Verhalten und Erleben des Menschen. Hier im Psychologiemuseum bieten wir dir die Möglichkeit, mehr über die Geschichte, die Theorien und die aktuellen Entwicklungen der Psychologie zu erfahren.</p>
+    </section>
+
+    <!-- Section: Geschichte -->
+    <section id="history">
+        <h2>Die Geschichte der Psychologie</h2>
+        <p>Die Psychologie hat sich über Jahrhunderte entwickelt, angefangen bei den frühen philosophischen Überlegungen bis hin zu den neuesten Erkenntnissen aus der kognitiven Neurowissenschaft. Entdecke, wie Psychologie als wissenschaftliche Disziplin entstand.</p>
+    </section>
+
+    <!-- Section: Interaktive Ausstellungen -->
+    <section id="exhibits">
+        <h2>Unsere Ausstellungen</h2>
+        <p>Erkunde die verschiedenen Themengebiete der Psychologie durch interaktive Ausstellungen. Klicke auf die Boxen, um mehr zu erfahren.</p>
+        <div class="interactive">
+            <div>
+                <h3>Verhaltenstheorien</h3>
+                <p>Interaktive Beispiele zu verschiedenen Verhaltenstheorien.</p>
+            </div>
+            <div>
+                <h3>Kognitive Psychologie</h3>
+                <p>Erfahre mehr über Wahrnehmung, Gedächtnis und Entscheidungsprozesse.</p>
+            </div>
+            <div>
+                <h3>Neurowissenschaften</h3>
+                <p>Visualisierungen von Gehirnaktivitäten und den neuesten Erkenntnissen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Forschung -->
+    <section id="research">
+        <h2>Aktuelle Psychologische Forschung</h2>
+        <p>Die Psychologie steht nie still. Hier findest du die neuesten Forschungsarbeiten und spannende Projekte, die an unserem Institut durchgeführt werden.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Psychologiemuseum | Alle Rechte vorbehalten</p>
+    </footer>
 </body>
 </html>
