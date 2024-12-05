@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>80er Jahre Webseite</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(to bottom, #000428, #004e92);
+            color: #00ffcc;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+        }
+        p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+        .grid {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            background: repeating-linear-gradient(
+                to right,
+                #ffffff33 0%,
+                #ffffff33 5px,
+                transparent 5px,
+                transparent 10px
+            ),
+            repeating-linear-gradient(
+                to top,
+                #ffffff33 0%,
+                #ffffff33 5px,
+                transparent 5px,
+                transparent 10px
+            );
+        }
+    </style>
+</head>
+<body>
+    <h1>Willkommen in den 80ern!</h1>
+    <p>Hier ist deine stylische Retro-Webseite.</p>
+    <div class="grid"></div>
+</body>
+</html>
