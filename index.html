@@ -17,18 +17,19 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between; /* Stellen Sie sicher, dass der Inhalt und der Footer Platz haben */
             align-items: center;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             overflow: hidden;
             font-size: 1.2rem;
+            padding-bottom: 2rem; /* Etwas Platz für den Footer */
         }
         h1 {
             font-size: 6rem;
             font-weight: bold;
             letter-spacing: 0.15em;
-            margin-bottom: 0;
+            margin-bottom: 2rem; /* Mehr Abstand zwischen Titel und Eröffnungszeile */
             text-align: center;
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
         }
@@ -45,6 +46,10 @@
             color: #bbbbbb;
             text-align: center;
             font-size: 1rem;
+            width: 100%;
+            position: fixed;
+            bottom: 0; /* Footer immer am unteren Rand */
+            left: 0;
         }
         
         /* Responsive Design */
