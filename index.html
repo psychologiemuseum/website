@@ -25,27 +25,27 @@
             padding: 2rem; /* Abstand für kleinere Bildschirme */
         }
         h1 {
-            font-size: 6rem;
+            font-size: 4rem; /* Kleinere Schriftgröße für den Titel */
             font-weight: bold;
             letter-spacing: 0.15em;
-            margin-bottom: 2rem; /* Abstand zwischen Titel und Eröffnungszeile */
+            margin-bottom: 1.5rem; /* Abstand zwischen Titel und Untertitel */
             text-align: center;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
         }
         p {
             color: #bbbbbb;
-            font-size: 1.5rem;
+            font-size: 1.5rem; /* Untertitel bleibt wie vorher */
             text-align: center;
-            margin-top: 1rem;
+            margin-top: 0.5rem;
         }
         footer {
-            padding: 1rem;
+            padding: 0.5rem 1rem; /* Dezenter Abstand */
             background-color: #000000;
-            color: #bbbbbb;
+            color: #888888; /* Etwas heller, aber dezenter */
             text-align: center;
-            font-size: 0.8rem; /* Kleinere Schriftgröße für den Footer */
+            font-size: 0.7rem; /* Kleinere Schriftgröße für den Footer */
             width: 100%;
-            position: fixed;
+            position: absolute; /* Absolut, damit es unten bleibt */
             bottom: 0; /* Footer immer am unteren Rand */
             left: 0;
         }
@@ -53,16 +53,13 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
-                font-size: 3rem; /* Titel wird auf kleinen Bildschirmen kleiner */
+                font-size: 2.5rem; /* Noch kleinere Schriftgröße für den Titel auf Mobilgeräten */
             }
             p {
-                font-size: 1rem; /* Eröffnungszeile angepasst */
-            }
-            body {
-                padding: 1rem; /* Mehr Platz auf kleinen Bildschirmen */
+                font-size: 1.2rem; /* Leicht verkleinert für kleinere Bildschirme */
             }
             footer {
-                font-size: 0.7rem; /* Noch kleinere Schriftgröße für mobile Geräte */
+                font-size: 0.6rem; /* Noch kleinere Schriftgröße für den Footer */
             }
         }
     </style>
