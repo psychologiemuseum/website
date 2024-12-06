@@ -25,16 +25,17 @@
             padding: 2rem;
         }
         h1 {
-            font-size: 4rem; /* Kleinerer Titel */
+            font-size: 4rem; /* Kleinerer Titel für Desktop */
             font-weight: bold;
             letter-spacing: 0.15em;
             margin-bottom: 1.5rem;
             text-align: center;
             text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+            line-height: 1.2;
         }
         p {
             color: #bbbbbb;
-            font-size: 1.5rem; /* Untertitel unverändert */
+            font-size: 1.5rem;
             text-align: center;
             margin-top: 0.5rem;
         }
@@ -43,7 +44,7 @@
             background-color: #000000;
             color: #888888;
             text-align: center;
-            font-size: 0.5rem; /* Noch kleinere Schriftgröße für den Footer */
+            font-size: 0.5rem; /* Kleinere Schriftgröße für den Footer */
             width: 100%;
             position: absolute;
             bottom: 0;
@@ -53,13 +54,20 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5rem; /* Titel wird auf mobilen Geräten kleiner */
+                font-size: 2.5rem; /* Titel wird kleiner auf mobilen Geräten */
+                line-height: 1.5; /* Mehr Abstand zwischen Zeilen */
+            }
+            h1::after {
+                content: "Das\nPsychologie-\nmuseum"; /* Manuelle Zeilenumbrüche */
+                white-space: pre-line;
+                display: block;
+                font-size: 2.5rem;
             }
             p {
-                font-size: 1.2rem; /* Untertitel etwas angepasst */
+                font-size: 1.2rem; /* Untertitel etwas kleiner */
             }
             footer {
-                font-size: 0.3rem; /* Noch kleinere Schriftgröße für Mobilgeräte */
+                font-size: 0.4rem; /* Noch kleinere Schriftgröße für den Footer */
             }
         }
     </style>
