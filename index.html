@@ -17,13 +17,12 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Inhalt wird vertikal zentriert */
+            justify-content: center; /* Inhalt bleibt zentriert */
             align-items: center;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             overflow: hidden;
-            font-size: 1.2rem;
-            padding-bottom: 2rem; /* Etwas Platz für den Footer */
+            padding: 2rem; /* Abstand für kleinere Bildschirme */
         }
         h1 {
             font-size: 6rem;
@@ -44,7 +43,7 @@
             background-color: #000000;
             color: #bbbbbb;
             text-align: center;
-            font-size: 1rem;
+            font-size: 0.8rem; /* Kleinere Schriftgröße für den Footer */
             width: 100%;
             position: fixed;
             bottom: 0; /* Footer immer am unteren Rand */
@@ -54,10 +53,16 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
-                font-size: 4rem;
+                font-size: 3rem; /* Titel wird auf kleinen Bildschirmen kleiner */
             }
             p {
-                font-size: 1.2rem;
+                font-size: 1rem; /* Eröffnungszeile angepasst */
+            }
+            body {
+                padding: 1rem; /* Mehr Platz auf kleinen Bildschirmen */
+            }
+            footer {
+                font-size: 0.7rem; /* Noch kleinere Schriftgröße für mobile Geräte */
             }
         }
     </style>
