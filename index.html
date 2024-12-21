@@ -50,23 +50,24 @@
             left: 0;
         }
 
-        /* Debug – Nur für Mobilgeräte */
+        /* Responsive Anpassungen für Mobilgeräte */
         @media (max-width: 768px) {
             h1, p {
                 text-align: left;
-                margin-left: 1.5rem;
+                margin-left: 0.75rem; /* Linke Marge halbiert */
             }
             h1 {
                 font-size: 2rem;
                 line-height: 1.4;
+                transform: translateY(-30%); /* Titel 30% höher */
             }
             p {
                 font-size: 1rem;
                 margin-top: 0.75rem;
+                transform: translateY(-30%); /* Untertitel 30% höher */
             }
             footer {
-                font-size: 0.5rem; /* Reduzierte Schriftgröße */
-                border: 1px solid red; /* Testrahmen zum Debuggen */
+                font-size: 0.5rem; /* Footer nur auf Mobil kleiner */
             }
         }
     </style>
@@ -78,7 +79,7 @@
     </header>
 
     <footer>
-        <p>&copy; 2008 - 2024 Psychologiemuseum | Alle Rechte vorbehalten</p>
+        <p>&copy; 2008 - 2025 Psychologiemuseum | Alle Rechte vorbehalten</p>
     </footer>
 </body>
 </html>
