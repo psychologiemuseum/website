@@ -11,7 +11,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Helvetica', Arial, sans-serif;
+            font-family: 'Georgia', 'Times New Roman', serif; /* Seriösere Schriftart */
             background-color: #000000;
             color: #FFFFFF;
             height: 100vh;
@@ -19,23 +19,21 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em; /* Dezente Abstände */
             overflow: hidden;
             padding: 2rem;
         }
         h1 {
-            font-size: 4rem; /* Kleinere Schriftgröße */
-            font-weight: bold;
-            letter-spacing: 0.15em;
-            margin-bottom: 1.5rem;
+            font-size: 3rem; /* Kleinere, seriösere Überschrift */
+            font-weight: normal; /* Kein fetter Text */
             text-align: center;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            line-height: 1.3;
         }
         p {
             color: #bbbbbb;
-            font-size: 1.5rem; /* Untertitel unverändert */
+            font-size: 1.25rem; /* Dezenter Untertitel */
             text-align: center;
             margin-top: 0.5rem;
         }
@@ -44,25 +42,25 @@
             background-color: #000000;
             color: #888888;
             text-align: center;
-            font-size: 0.6rem; /* Eindeutig kleiner, aber sichtbar */
-            line-height: 1; /* Kompakter, weniger Platz pro Zeile */
+            font-size: 0.6rem; /* Kleine Schriftgröße */
+            line-height: 1; /* Kompakte Zeilenhöhe */
             width: 100%;
-            position: absolute; /* Footer bleibt unten */
+            position: absolute; /* Footer bleibt am unteren Rand */
             bottom: 0;
             left: 0;
         }
 
-        /* Responsive Design */
+        /* Responsive Design für kleinere Bildschirme */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5rem; /* Titel wird kleiner auf mobilen Geräten */
-                line-height: 1.5; /* Mehr Abstand zwischen Zeilen */
+                font-size: 2rem; /* Kleinere Überschrift auf Mobilgeräten */
+                line-height: 1.4;
             }
             p {
-                font-size: 1.2rem; /* Untertitel etwas kleiner */
+                font-size: 1rem; /* Kleinere Schrift für Untertitel */
             }
             footer {
-                font-size: 0.5rem; /* Eindeutig kleinere Schriftgröße für den Footer auf Mobil */
+                font-size: 0.5rem; /* Sehr klein auf Mobil */
             }
         }
     </style>
@@ -74,7 +72,7 @@
     </header>
 
     <footer>
-        <p>&copy; 2008 - 2025 Psychologiemuseum | Alle Rechte vorbehalten</p>
+        <p>&copy; 2008 - 2024 Psychologiemuseum | Alle Rechte vorbehalten</p>
     </footer>
 </body>
 </html>
