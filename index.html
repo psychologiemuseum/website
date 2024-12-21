@@ -42,7 +42,7 @@
             background-color: #000000;
             color: #888888;
             text-align: center;
-            font-size: 0.6rem;
+            font-size: 0.6rem; /* Standardgröße */
             line-height: 1;
             width: 100%;
             position: absolute;
@@ -50,7 +50,7 @@
             left: 0;
         }
 
-        /* Responsive Design für kleinere Bildschirme */
+        /* Debug – Nur für Mobilgeräte */
         @media (max-width: 768px) {
             h1, p {
                 text-align: left;
@@ -65,7 +65,8 @@
                 margin-top: 0.75rem;
             }
             footer {
-                font-size: 0.5rem; /* Footer nur auf Mobil kleiner */
+                font-size: 0.5rem; /* Reduzierte Schriftgröße */
+                border: 1px solid red; /* Testrahmen zum Debuggen */
             }
         }
     </style>
