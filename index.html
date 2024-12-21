@@ -11,7 +11,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Georgia', 'Times New Roman', serif; /* Seriösere Schriftart */
+            font-family: 'Georgia', 'Times New Roman', serif;
             background-color: #000000;
             color: #FFFFFF;
             height: 100vh;
@@ -19,13 +19,13 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            letter-spacing: 0.05em; /* Dezente Abstände */
+            letter-spacing: 0.05em;
             overflow: hidden;
             padding: 2rem;
         }
         h1 {
-            font-size: 3rem; /* Kleinere, seriösere Überschrift */
-            font-weight: normal; /* Kein fetter Text */
+            font-size: 3rem;
+            font-weight: normal;
             text-align: center;
             margin-bottom: 1.5rem;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -33,7 +33,7 @@
         }
         p {
             color: #bbbbbb;
-            font-size: 1.25rem; /* Dezenter Untertitel */
+            font-size: 1.25rem;
             text-align: center;
             margin-top: 0.5rem;
         }
@@ -42,25 +42,30 @@
             background-color: #000000;
             color: #888888;
             text-align: center;
-            font-size: 0.6rem; /* Kleine Schriftgröße */
-            line-height: 1; /* Kompakte Zeilenhöhe */
+            font-size: 0.6rem;
+            line-height: 1;
             width: 100%;
-            position: absolute; /* Footer bleibt am unteren Rand */
+            position: absolute;
             bottom: 0;
             left: 0;
         }
 
         /* Responsive Design für kleinere Bildschirme */
         @media (max-width: 768px) {
+            h1, p {
+                text-align: left; /* Links ausgerichtet */
+                margin-left: 1.5rem; /* Marge am linken Rand */
+            }
             h1 {
-                font-size: 2rem; /* Kleinere Überschrift auf Mobilgeräten */
+                font-size: 2rem; /* Kleinere Schrift für Mobilgeräte */
                 line-height: 1.4;
             }
             p {
-                font-size: 1rem; /* Kleinere Schrift für Untertitel */
+                font-size: 1rem;
+                margin-top: 0.75rem; /* Leichter Abstand */
             }
             footer {
-                font-size: 0.5rem; /* Sehr klein auf Mobil */
+                font-size: 0.5rem; /* Sehr kleine Schrift im Footer */
             }
         }
     </style>
