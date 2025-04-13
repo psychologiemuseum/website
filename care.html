@@ -10,15 +10,9 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
-            background: repeating-linear-gradient(
-                45deg,
-                #f7e200,
-                #f7e200 18.9px,
-                #009f4d 18.9px,
-                #009f4d 37.8px
-            );
             color: #000000;
             min-height: 100vh;
             display: flex;
@@ -26,25 +20,63 @@
             align-items: center;
             justify-content: center;
             padding: 2rem;
+            position: relative;
+            overflow: hidden;
         }
+
+        /* Hintergrund mit zwei sich überlagernden diagonalen Mustern */
+        body::before,
+        body::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(247, 226, 0, 0.5),
+                rgba(247, 226, 0, 0.5) 18.9px,
+                rgba(0, 159, 77, 0.5) 18.9px,
+                rgba(0, 159, 77, 0.5) 37.8px
+            );
+            z-index: -2;
+        }
+
+        body::after {
+            transform: rotate(1deg) scale(1.01); /* minimale Rotation + Skalierung */
+            opacity: 0.4;
+        }
+
         .content {
             background-color: #ffffff;
             padding: 2rem;
             max-width: 800px;
             width: 100%;
             text-align: left;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
         }
+
         h1 {
             font-size: 2rem;
             margin-bottom: 1rem;
         }
+
         p {
             font-size: 1.1rem;
             line-height: 1.6;
         }
+
         a {
             display: inline-block;
             margin-top: 2rem;
-            font
-
+            font-size: 0.95rem;
+            color: #000000;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Geschichte des Psychologiemuseums</h1>
+        <p>
+            Die Idee eines Psychologiemuseums entstand bereits Anfang der 2000er-Jahre als interdisziplinäre Initiative von Wissenschaftler:innen, Künstler:innen und Historiker:innen. Ziel war es, die Geschichte und Praxis der Psychologie erfahrbar zu machen – über Exponate, immersive Räume und
