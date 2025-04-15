@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Streifen Moiré Effekt</title>
+  <title>Streifen Moiré Effekt - Mausreaktiv</title>
   <style>
     html, body {
       margin: 0;
@@ -37,13 +37,13 @@
       vec2 uv = gl_FragCoord.xy / u_resolution;
       float y = uv.y;
 
-      // Streifenbreite, abhängig von der Mausposition
+      // Mausabhängige Frequenz für Streifenbreite
       float freq = 50.0 + u_mouse.x * 500.0;
 
       // Sinuswelle für das Streifenmuster
       float stripe = sin(y * freq + u_time);
       
-      // Schwarz-Weiß Schwelle für das Moiré-Muster
+      // Moiré-Muster mit schwarz-weißem Effekt
       float brightness = step(0.0, stripe);
 
       gl_FragColor = vec4(vec3(brightness), 1.0);
