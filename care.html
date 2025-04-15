@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Moiré Psychedelic</title>
+  <title>Moiré Schwarz-Weiß</title>
   <style>
     html, body {
       margin: 0;
@@ -45,14 +45,8 @@
 
       float moire = wave1 * wave2;
 
-      // Psychedelische Farben aus Interferenzwert ableiten
-      vec3 color = vec3(
-        0.5 + 0.5 * sin(moire * 3.0 + u_time),
-        0.5 + 0.5 * sin(moire * 5.0 + u_time + 2.0),
-        0.5 + 0.5 * sin(moire * 7.0 - u_time + 4.0)
-      );
-
-      gl_FragColor = vec4(color, 1.0);
+      float brightness = 0.5 + 0.5 * moire;
+      gl_FragColor = vec4(vec3(brightness), 1.0);
     }
   </script>
 
