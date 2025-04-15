@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Moiré Schwarz-Weiß</title>
+  <title>Streifenbasiertes Moiré</title>
   <style>
     html, body {
       margin: 0;
@@ -37,21 +37,21 @@
       vec2 uv = gl_FragCoord.xy / u_resolution;
       vec2 centered = uv - 0.5;
 
-      // Berechnung der Winkelverschiebung basierend auf der Maus
+      // Winkelverschiebung der Maus
       float angle = atan(u_mouse.y - 0.5, u_mouse.x - 0.5);
       
-      // Gröbere Frequenz, abhängig von der Mausposition
-      float freq1 = 50.0 + u_mouse.x * 500.0;
-      float freq2 = 50.0 + u_mouse.y * 500.0;
+      // Streifenfrequenz abhängig von der Mausposition
+      float freq1 = 50.0 + u_mouse.x * 300.0;
+      float freq2 = 50.0 + u_mouse.y * 300.0;
 
-      // Überlagerung von zwei sinusförmigen Wellen mit variierender Frequenz
+      // Sinuswellen erzeugen
       float wave1 = sin(dot(centered, vec2(cos(angle), sin(angle))) * freq1 + u_time);
       float wave2 = sin(dot(centered, vec2(sin(angle), cos(angle))) * freq2 - u_time);
 
-      // Moiré-Muster mit Überlagerung
+      // Überlagerung der Wellen
       float moire = wave1 * wave2;
 
-      // Harte Schwelle für schwarz-weiß Umwandlung
+      // Harte Grenze für Schwarz-Weiß
       float brightness = step(0.0, moire);
       gl_FragColor = vec4(vec3(brightness), 1.0);
     }
