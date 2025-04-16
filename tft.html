@@ -1,1 +1,55 @@
 
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Echter Moiré-Effekt mit WebGL</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+      touch-action: none;
+    }
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+      cursor: none;
+      touch-action: none;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="moireeCanvas"></canvas>
+
+  <!-- Fragment Shader -->
+  <script type="x-shader/x-fragment" id="fragmentShader">
+    precision mediump float;
+    uniform float u_time;
+    uniform vec2 u_resolution;
+    uniform vec2 u_mouse;
+    uniform vec2 u_touchPos;
+    uniform float u_touchTime;
+
+    void main() {
+      vec2 uv = gl_FragCoord.xy / u_resolution.xy;
+
+      float angle = atan(u_mouse.y - 0.5, u_mouse.x - 0.5);
+      float scale1 = 800.0 + u_mouse.x * 1000.0;
+      float scale2 = 802.0 + u_mouse.y * 1000.0;
+
+      float stripes1 = sin((uv.x * cos(angle) + uv.y * sin(angle)) * scale1);
+      float stripes2 = sin((uv.x * cos(angle) + uv.y * sin(angle)) * scale2 + u_time * 0.3);
+
+      float moire = mix(stripes1, stripes2, 0.5);
+      moire = smoothstep(0.4, 0.6, moire);
+
+      // TFT-Fingerdruckeffekt
+      float dist = distance(uv, u_touchPos);
+      float ripple = smoothstep(0.2, 0.0, dist); // weicher Übergang
+      vec3 touchColor = vec3(
+        0.7 + 0.3 * sin(15.0 * dist - u_touchTime * 3.0),
+        0.7 + 0.3
